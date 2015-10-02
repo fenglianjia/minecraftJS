@@ -1,409 +1,1090 @@
-JSå‡½æ•°å…¨é›†ï¼ˆå®Œæ•´ï¼‰
-ä¸€.é’©å­(hook)å‡½æ•°
-å½“æ‰§è¡Œäº†ç‰¹å®šåŠ¨ä½œæ—¶ï¼Œè¿™äº›å‡½æ•°ä¼šè¿è¡Œå¹¶æ‰§è¡Œå…¶ä»–å‡½æ•°
+¸Ãº¯Êı±í¶ÔÓ¦µÄÆô¶¯Æ÷°æ±¾Îª1.6.7beta
+
+¼¸¸ö×¢ÒâµÄÎÊÌâ:
+ÓÉÓÚÕâÊÇÔÚµçÄÔÓïÑÔÀï£¬µÚÒ»¸öÊı²»ÊÇ1£¬¶øÊÇ0
+·²ÊÇparXStringµÄĞèÒª""£¬¸ñÊ½Îª"ÄÚÈİ"
+ÕâĞ©º¯ÊıÓ¦¸Ã¶¼ÊÇÍêÕûµÄ
+²»¹ı¿ÉÄÜÓĞÒ»Ğ©ÕÒ²»µ½
+
+minecraftº¯Êı
+
+ÎŞÇ°×ºº¯Êı
+
+×î³õµÄModPEScripts0.2µÄº¯Êı
+(»¹²»ÊÇÕÅ×¿Î°(500ISE)¿ª·¢Ê±)
+
+addItemInventory(par1int, par2int, par3int);
+Ìí¼ÓÎïÆ·(ÔÚÍæ¼ÒµÄ±³°üÀï)
+par1intÊÇÎïÆ·id
+par2intÊÇÊıÁ¿
+par3intÊÇÌØÊâÊı¾İ
+
+bl_setMobSkin(par1int, par2String);
+·½¿éÆô¶¯Æ÷ÌØÓĞº¯Êı
+ÒÑÍ£ÓÃ£¡
+
+¾ßÌåÓÃ·¨ÓëEntityÀàµÄEntity.setMonSkin()ÏàÍ¬
+
+bl_spawnMob(par1double, par2double, par3double, par4int, par5String);
+·½¿éÆô¶¯Æ÷ÌØÓĞº¯Êı
+ÒÑÍ£ÓÃ£¡
+
+¾ßÌåÓÃ·¨ÓëLevelÀàµÄLevel.spawnMob()ÏàÍ¬
+
+clientMessage(par1String);
+ÔÚÓÎÏ·¶Ô»°À¸ÀïÊä³öĞÅÏ¢
+pat1StringÌîĞ´Êä³öµÄĞÅÏ¢
+
+explode(par1double, par2double, par3double, par4double);
+·¢Éú±¬Õ¨
+par1doubleÎªX×ø±ê
+par2doubleÎªY×ø±ê
+par3doubleÎªZ×ø±ê 
+par4doubleÎª±¬Õ¨µÄ°ë¾¶
+
+getCarriedItem();
+Ì½²â(Íæ¼Ò)ÊÖ³ÖÎïÆ·id
+·µ»ØÖµÎªÊÖ³ÖÎïÆ·µÄid
+
+getLevel();
+²»Ã÷
+
+getPitch(par1Object);
+»ñÈ¡par1ObjectµÄYÖáÊÓ½Ç£¬¼È×İÏòÊÓ½Ç
+par1ObjectÌî½øÈ¥ÊµÌå
+·µ»ØÖµÎªµ±Ç°ÎïÆ·µÄpar1ObjectµÄYÖáÊÓ½Ç 
+
+getPlayerEnt();
+»ñÈ¡Íæ¼ÒµÄÊµÌå(¾ÍÊÇÍæ¼ÒµÄÊµÌå£¬¶ÔÍæ¼Ò½øĞĞ²Ù×÷Ê±ÊµÌåÌîÕâ¸ö)
+
+getPlayerX();
+»ñÈ¡Íæ¼ÒµÄX×ø±ê
+·µ»ØÖµÎªÍæ¼ÒµÄX×ø±ê
+
+getPlayerY();
+»ñÈ¡Íæ¼ÒµÄY×ø±ê
+·µ»ØÖµÎªÍæ¼ÒµÄY×ø±ê 
+
+getPlayerZ();
+»ñÈ¡Íæ¼ÒµÄZ×ø±ê
+·µ»ØÖµÎªÍæ¼ÒµÄZ×ø±ê 
+
+getTile(par1int, par2int, par3int);
+»ñÈ¡Ö¸¶¨×ø±êµÄ·½¿éid
+par1intÌîX×ø±ê
+par2intÌîY×ø±ê
+par3intÌîZ×ø±ê 
+·µ»ØÖµÎªÖ¸¶¨×ø±êµÄ·½¿éid
+
+getYaw(par1Object);
+»ñÈ¡par1ObjectµÄXÖáÊÓ½Ç£¬¼ÈºáÏòÊÓ½Ç
+par1ObjectÌîÊµÌå
+·µ»ØÖµÎªpar1ObjectµÄXÖáÊÓ½Ç
+
+preventDefault();
+×èÖ¹Ä¬ÈÏ²Ù×÷
+Õâ¸ö±È½ÏÄÑ½âÊÍ£¬¾ÍÊÇ°Ñ¹¥»÷ÊµÌå±ä³É×èÖ¹¹¥»÷ÊµÌå£¬±ÈÈçÄãÊ¹ÓÃ¹Ç·Ûµã»÷²İ·½¿é£¬²İ·½¿é¾Í³¤²İ£¬µ«¼ÓÉÏÁËÕâ¸öº¯Êı£¬¾ÍÊ²Ã´Ò²²»»á·¢Éú
+
+print(par1String);
+ÔÚÓÎÏ·ÖĞÊä³öToast£¬¾ÍÊÇÌáÊ¾À¸
+par1StringÎªÄÚÈİ
+
+rideAnimal(par1int, par2int);
+Õâ¸ö¾ÍÊÇÊµÌåpar1intÆïÉÏÊµÌåpar2int
+Á½¸ö¶¼ÌîÊµÌå
+
+setNightMode(par1boolean);
+ÍíÉÏÄ£Ê½£¬¾ÍÊÇÏÂ½ç·´Ó¦¶ÑÆô¶¯Æ÷Ê±µÄÄÇ¸ö£¬³¬¼¶¿ìÍíÉÏ
+par1boolean¾ÍÊÇ²¼¶ûÖµ£¬true»òfalse
+
+setPosition(par1int, par2double, par3double, par4double);
+Éè¶¨par1intÊµÌåµÄ×ø±ê
+par1intÌîÊµÌå
+par2doubleÊÇX×ø±ê
+par3doubleÊÇY×ø±ê 
+par3doubleÊÇZ×ø±ê
+
+setPositionRelative(par1int, par2double, par3double, par4double);
+ÉèÖÃÖ¸¶¨ÊµÌå¶ÔÓÚÍæ¼ÒµÄÏà¶ÔÎ»ÖÃ
+par1intÌîÊµÌå
+ºóÃæÈı¸ö·Ö±ğÎªx,y,z×ø±ê
+
+setRot(par1int, par2double, par3double);
+Éè¶¨Ö¸¶¨ÊµÌåµÄÊÓ½Ç
+par1intÎªÊµÌå
+par2doubleÎªxÊÓ½Ç£¬¼ÈºáÖáÊÓ½Ç
+par3doubleÎªyÊÓ½Ç£¬¼È×İÖáÊÓ½Ç 
+
+setTile(par1int, par2int, par3int, par4int, par5int);
+Éè¶¨Ö¸¶¨×ø±êµÄ·½¿é
+par1intÎªX×ø±ê
+par2intÎªY×ø±ê
+par3intÎªZ×ø±ê
+par4intÎª·½¿éid(0~255,³¬¹ı·¶Î§Æô¶¯Æ÷½«×Ô¶¯µ÷Õû)
+par5intÎª·½¿éÌØÊâÊı¾İ(0~15,³¬¹ı·¶Î§Æô¶¯Æ÷½«×Ô¶¯µ÷Õû)
+
+setVelX(par1int, par2double);
+ÈÃÖ¸¶¨ÊµÌåÑØ×ÅXÖáÇ°½ø
+par1intÌîÊµÌå
+par2doubleÎªÇ°½øµÄ¾àÀë
+
+setVelY(par1int, par2double);
+ÈÃÖ¸¶¨ÊµÌåÑØ×ÅYÖáÇ°½ø
+par1intÌîÊµÌå
+par2doubleÎªÇ°½øµÄ¾àÀë 
+
+setVelZ(par1int, par2double);
+ÈÃÖ¸¶¨ÊµÌåÑØ×ÅZÖáÇ°½ø
+par1intÌîÊµÌå
+par2doubleÎªÇ°½øµÄ¾àÀë 
+
+spawnChicken(par1double, par2double, par3double, par4String);
+ÔÚÖ¸¶¨×ø±êÉú³ÉÖ¸¶¨Æ¤·ôµÄ¼¦
+par1doubleÎªX×ø±ê
+par2doubleÎªY×ø±ê
+par3doubleÎªZ×ø±ê
+par4StringÎªÆ¤·ô(ÔÚ²ÄÖÊ°üµÄÂ·¾¶)
+
+spawnCow(par1double, par2double, par3double, par4String);
+ÔÚÖ¸¶¨×ø±êÉú³ÉÖ¸¶¨Æ¤·ôµÄÅ£
+par1doubleÎªX×ø±ê
+par2doubleÎªY×ø±ê
+par3doubleÎªZ×ø±ê
+par4StringÎªÆ¤·ô(ÔÚ²ÄÖÊ°üµÄÂ·¾¶)
+
+spawnPigZombie(par1double, par2double, par3double, par4int, par5String);
+ÔÚÖ¸¶¨×ø±êÉú³ÉÖ¸¶¨Æ¤·ôÊÖ³ÖÖ¸¶¨ÎïÆ·µÄ½©Ê¬ÖíÈË
+par1doubleÎªX×ø±ê
+par2doubleÎªY×ø±ê
+par3doubleÎªZ×ø±ê
+par4intÎªÊÖ³ÖÎïÆ·µÄid
+par5StringÎªÆ¤·ô(ÔÚ²ÄÖÊ°üµÄÂ·¾¶)
+
+Cºó×ºÎÄ¼şÀïµÄblÀàº¯Êı
+
+ÔİÊ±Ã»ÓĞÊÕÂ¼¸ÃÀàº¯Êı
+
+
+ModPEÀàº¯Êı
+
+¸÷ÖÖÉæ¼°µ½MCPEµÄº¯Êı
+
+ModPE.getItemName(par1int, par2int, par3boolean);
+»ñÈ¡ÎïÆ·Ãû×ÖÇ°×º
+par1intÎªid
+par2intÎªdata
+par3boolean²»Ã÷(ÌîtrueÕı³£»ñÈ¡£¬falseÊ²Ã´Ò²»ñÈ¡²»ÁË)
+
+ModPE.joinServer(par1String, par2int);
+½øÈë·şÎñÆ÷
+par1StringÎªIPµØÖ·
+par2Îªport¶Ë¿Ú
+
+ModPE.langEdit(par1String, par2String);
+ĞŞ¸ÄÎÄ×ÖÒıÓÃ
+par1StringÎªÇ°×º
+par2StringÎª×Ö·û´®
+
+ModPE.leaveGame();
+ÍË³ö´æµµ
+
+ModPE.log(par1String);
+´òÓ¡Ö¸¶¨ÏûÏ¢ÈÕÖ¾
+
+ModPE.overrideTexture(par1String, par2String);
+²»Ã÷
+(¾İËµÊÇ¶ÁÈ¡²ÄÖÊ)
+
+ModPE.readData(par1String);
+¶ÁÈ¡Æô¶¯Æ÷´¢´æµÄÊı¾İ
+par1StringÎªÊı¾İµÄÃû×Ö
+
+ModPE.removeData(par1String);
+ÒÆ³ı(É¾³ı)Æô¶¯Æ÷´¢´æµÄÊı¾İ
+par1StringÎªÊı¾İµÄÃû×Ö 
+
+ModPE.resetImages();
+¸ñÊ½»¯²ÄÖÊ°ü
+
+ModPE.saveData(par1String, par2String);
+´¢´æÊı¾İ
+par1StringÎªÊı¾İµÄÃû×Ö 
+par2StringÎª´¢´æµÄ±äÁ¿ÔÚÊı¾İÀï
+
+ModPE.selectLevel(par1String, par2String, par3String, par4int);
+Ìø×ª´æµµ
+par1StringÎª´æµµµÄÃû×Ö
+Ê£ÓàµÄÎ´Öª
+
+ModPE.setFoodItem(par1int, par2String, par3int, par4int, par5String);
+Éè¶¨Ö¸¶¨ÎïÆ·ÎªÊ³Æ·(¿ÉÒÔ×öµ½Ìí¼ÓÎïÆ·)
+par1intÎªID
+par2StringÎª²ÄÖÊÔÚitem.metaÒıÓÃµÄÃû×Ö
+par3intÎª²ÄÖÊµÄÅÅÁĞÖµ
+par4intÎª²¹³äµÄÑªÁ¿
+par5StringÎªÎïÆ·µÄÃû×Ö
+
+ModPE.setGameSpeed(par1double);
+Éè¶¨µ±Ç°ÓÎÏ·×î¸ßFPS(ÆäÊµ¾ÍÊÇËÙ¶È)
+par1doubleÎªÉè¶¨µÄFPS(Ä¬ÈÏÎª20)
+1.6.2~1.6.6°æ±¾Æô¶¯Æ÷ÎŞ·¨Ê¹ÓÃ
+
+ModPE.setGuiBlocks(par1String);
+Éè¶¨GuiBlick.png(¾ÍÊÇ°Ñ·½¿é·ÅÔÚÎïÆ·À¸Àï·½¿éµÄÑù×Ó)Îªpar1String
+par1StringÎªÍ¼Æ¬(µÄÂ·¾¶)
+(Í¼Æ¬ÒıÓÃÊÇ0.8.0ÒÔÏÂ°æ±¾Ê¹ÓÃµÄ£¬080²»ÔÙÊ¹ÓÃ¸ÃÉè¶¨)
+
+ModPE.setItem(par1int, par2String, par3int, par4String);
+Éè¶¨Ö¸¶¨ÎïÆ·(¿ÉÒÔ×öµ½Ìí¼ÓÎïÆ·)
+par1intÎªID
+par2StringÎª²ÄÖÊÔÚitem.metaÒıÓÃµÄÃû×Ö
+par3intÎª²ÄÖÊµÄÅÅÁĞÖµ
+par4StringÎªÎïÆ·µÄÃû×Ö
+
+ModPE.setItems(par1String);
+Éè¶¨Items.png(¾ÍÊÇÊÖÉÏµÄÎïÆ·Í¼±ê£¬id256~£¿£¿£¿µÄÎïÆ·)Îªpar1String
+par1StringÎªÍ¼Æ¬(µÄÂ·¾¶)
+
+ModPE.setTerrain(par1String);
+Éè¶¨Terrain.meta(·½¿é²ÄÖÊÖµÒıÓÃ)µÄÂ·¾¶
+par1StringÎªÂ·¾¶
+
+ModPE.takeScreenshot(par1String);
+ÔÚMCPEÀï½ØÍ¼(ÒòÎªÊÇÄÚÖÃ½ØÍ¼£¬²»ÄÜÅÄµ½GUIµÈ¶«Î÷)
+par1StringÎªÂ·¾¶
+
+ModPE.addFurnaceRecipe(par1int,par2int,par3int);
+Ìí¼ÓÈÛÂ¯Åä·½
+par1intÎªÉÕµÄÎïÆ·id
+par2intÎªÉÕ³öÀ´µÄÎïÆ·id
+par3intÎªÉÕ³öÀ´µÄÎïÆ·data
+
+ModPE.addCraftRecipe(par1int,par2int,par3int,Scriptable)
+Ìí¼ÓºÏ³ÉÅä·½
+par1intÎªºÏ³ÉÊä³öµÄÎïÆ·id
+par2intÎªºÏ³ÉÊä³öµÄÎïÆ·ÊıÁ¿
+par3intÎªºÏ³ÉÊä³öµÄÎïÆ·data
+ScriptableÎªºÏ³É¹«Ê½
+[id,data,id,data¡­¡­]
+ÒÔ´ËÀàÍÆ
+
+
+
+
+JSº¯ÊıÈ«¼¯£¨ÍêÕû£©
+
+Ò».¹³×Ó(hook)º¯Êı
+
+µ±Ö´ĞĞÁËÌØ¶¨¶¯×÷Ê±£¬ÕâĞ©º¯Êı»áÔËĞĞ²¢Ö´ĞĞÆäËûº¯Êı
+
 1.function useItem(x,y,z,itemId,blockId,side,itemDamage,blockDamage){}
-å½“è¿›è¡Œä¸€æ¬¡ç‚¹å‡»æ—¶(å¦‚ä½¿ç”¨ç‰©å“æˆ–æ”¾ç½®æ–¹å—ï¼Œé£Ÿç”¨é£Ÿç‰©ä¸åŒ…æ‹¬åœ¨å†…)ä¼šè§¦å‘è¿™ä¸ªå‡½æ•°ï¼Œå¹¶è¿”å›æ•°æ®ã€‚
-x:è¢«ç‚¹å‡»æ–¹å—çš„xåæ ‡
-y:è¢«ç‚¹å‡»æ–¹å—çš„yåæ ‡
-z:è¢«ç‚¹å‡»æ–¹å—çš„zåæ ‡
-itemId:ç‚¹å‡»æ—¶æ‰‹é‡Œæ‹¿çš„ç‰©å“id(ç©ºæ‰‹ä¸º0)
-blockId:è¢«ç‚¹å‡»æ–¹å—çš„id
-side:æ–¹å—è¢«ä»å“ªä¸ªæ–¹å‘ç‚¹å‡»
-itemDamage:ç‚¹å‡»æ—¶æ‰‹é‡Œæ‹¿çš„ç‰©å“é™„åŠ å€¼(ä¼¤å®³å€¼)
-blockDamage:è¢«ç‚¹å‡»æ–¹å—çš„é™„åŠ å€¼(ä¼¤å®³å€¼)
+
+µ±½øĞĞÒ»´Îµã»÷Ê±(ÈçÊ¹ÓÃÎïÆ·»ò·ÅÖÃ·½¿é£¬Ê³ÓÃÊ³Îï²»°üÀ¨ÔÚÄÚ)»á´¥·¢Õâ¸öº¯Êı£¬²¢·µ»ØÊı¾İ¡£
+
+x:±»µã»÷·½¿éµÄx×ø±ê
+
+y:±»µã»÷·½¿éµÄy×ø±ê
+
+z:±»µã»÷·½¿éµÄz×ø±ê
+
+itemId:µã»÷Ê±ÊÖÀïÄÃµÄÎïÆ·id(¿ÕÊÖÎª0)
+
+blockId:±»µã»÷·½¿éµÄid
+
+side:·½¿é±»´ÓÄÄ¸ö·½Ïòµã»÷
+
+itemDamage:µã»÷Ê±ÊÖÀïÄÃµÄÎïÆ·¸½¼ÓÖµ(ÉËº¦Öµ)
+
+blockDamage:±»µã»÷·½¿éµÄ¸½¼ÓÖµ(ÉËº¦Öµ)
+
 2.function attackHook(attacker,victim){}
-å½“ç‚¹å‡»æˆ–æ”»å‡»äº†ä¸€ä¸ªç”Ÿç‰©mob(åŠ¨ç‰©ï¼Œæ€ªç‰©ï¼Œç©å®¶(å¾…ç¡®è®¤))æ—¶ä¼šè§¦å‘è¿™ä¸ªå‡½æ•°ï¼Œå¹¶è¿”å›æ•°æ®ã€‚
-attacker:è¿›è¡Œäº†ç‚¹å‡»æˆ–æ”»å‡»åŠ¨ä½œçš„mob
-victim:è¢«ç‚¹å‡»æˆ–æ”»å‡»çš„mob
+
+µ±µã»÷»ò¹¥»÷ÁËÒ»¸öÉúÎïmob(¶¯Îï£¬¹ÖÎï£¬Íæ¼Ò(´ıÈ·ÈÏ))Ê±»á´¥·¢Õâ¸öº¯Êı£¬²¢·µ»ØÊı¾İ¡£
+
+attacker:½øĞĞÁËµã»÷»ò¹¥»÷¶¯×÷µÄmob
+
+victim:±»µã»÷»ò¹¥»÷µÄmob
+
 3.function modTick(){}
-æ¯åˆ»(1/20s 0.05s)æ‰§è¡Œä¸€æ¬¡
+
+Ã¿¿Ì(1/20s 0.05s)Ö´ĞĞÒ»´Î
+
 4.function procCmd(cmd){}
-åœ¨èŠå¤©é‡Œè¾“å…¥ä»¥"/"å¼€å¤´çš„è¯æ–‡å­—å¹¶æ‰§è¡Œ(å›è½¦)æ—¶ä¼šè§¦å‘
-cmd:åœ¨èŠå¤©é‡Œè¾“å…¥çš„ä»¥"/"å¼€å¤´çš„æ–‡å­—(ä¸åŒ…å«"/")
+
+ÔÚÁÄÌìÀïÊäÈëÒÔ"/"¿ªÍ·µÄ»°ÎÄ×Ö²¢Ö´ĞĞ(»Ø³µ)Ê±»á´¥·¢
+
+cmd:ÔÚÁÄÌìÀïÊäÈëµÄÒÔ"/"¿ªÍ·µÄÎÄ×Ö(²»°üº¬"/")
+
 5.function newLevel(){}
-å½“ä¸–ç•Œè¢«è½½å…¥æ—¶(å‡ºç°"Building terrain"æ—¶)ä¼šè§¦å‘
+
+µ±ÊÀ½ç±»ÔØÈëÊ±(³öÏÖ"Building terrain"Ê±)»á´¥·¢
+
 6.function leaveGame(){}
-å½“ç¦»å¼€å½“å‰ä¸–ç•Œ(è¿”å›ä¸»èœå•)æ—¶ä¼šè§¦å‘
+
+µ±Àë¿ªµ±Ç°ÊÀ½ç(·µ»ØÖ÷²Ëµ¥)Ê±»á´¥·¢
+
 7.function entityAddedHook(entity){}
-å½“ä¸€ä¸ªæ–°çš„å®ä½“è¢«æ·»åŠ (åŒ…æ‹¬ç®­ï¼Œä¸‹è½çš„æ–¹å—ï¼Œç‚¹ç‡ƒçš„TNTç­‰)æ—¶ä¼šè§¦å‘
-entity:è¢«æ·»åŠ çš„è‡ªç„¶å®ä½“
+
+µ±Ò»¸öĞÂµÄÊµÌå±»Ìí¼Ó(°üÀ¨¼ı£¬ÏÂÂäµÄ·½¿é£¬µãÈ¼µÄTNTµÈ)Ê±»á´¥·¢
+
+entity:±»Ìí¼ÓµÄ×ÔÈ»ÊµÌå
+
 8.function entityRemovedHook(entity){}
-å½“ä¸€ä¸ªå®ä½“(åŒ…æ‹¬ç®­ï¼Œä¸‹è½çš„æ–¹å—ï¼Œç‚¹ç‡ƒçš„TNTç­‰)æ¶ˆå¤±æˆ–æ­»äº¡æ—¶ä¼šè§¦å‘
-entity:è¢«ç§»é™¤çš„å®ä½“
+
+µ±Ò»¸öÊµÌå(°üÀ¨¼ı£¬ÏÂÂäµÄ·½¿é£¬µãÈ¼µÄTNTµÈ)ÏûÊ§»òËÀÍöÊ±»á´¥·¢
+
+entity:±»ÒÆ³ıµÄÊµÌå
+
 9.function deathHook(murderer, victim){}
-å½“ä¸€ä¸ªç”Ÿç‰©modæ­»äº¡æ—¶ä¼šè§¦å‘
-murderer:é€ æˆæ­»äº¡çš„å®ä½“
-victim:æ­»äº¡çš„å®ä½“
+
+µ±Ò»¸öÉúÎïmodËÀÍöÊ±»á´¥·¢
+
+murderer:Ôì³ÉËÀÍöµÄÊµÌå
+
+victim:ËÀÍöµÄÊµÌå
+
 10.function levelEventHook(entity,eventType,x,y,z,data){}
-å½“é—¨(æœ¨é—¨,æ …æ é—¨,é™·é˜±é—¨)è¢«æ‰“å¼€æˆ–å…³é—­æ—¶ä¼šè§¦å‘
-å½“ç¾Šåƒæ‰è‰æ—¶è§¦å‘
-ç¡è§‰æ—¶è§¦å‘
-entity:åŠ¨ä½œçš„å®ä½“(è§‚æµ‹æ•°æ®ã€‚æ€»æ˜¯ä¸º0)
-eventType:äº‹ä»¶ç±»å‹(è§‚æµ‹æ•°æ®ã€‚å¼€å…³é—¨æ•°æ®ä¸º1003ï¼Œç¾Šåƒè‰çš„æ•°æ®ä¸º2001,ç¡è§‰çš„æ•°æ®ä¸º9800)
-x,y,z:è¢«ç‚¹å‡»çš„é—¨æ–¹å—çš„åæ ‡ï¼Œè¢«åƒæ‰çš„è‰æ–¹å—çš„åæ ‡ï¼Œç¡è§‰æ—¶ä¸º(0,0,0)
-data:æœªçŸ¥(è§‚æµ‹æ•°æ®ã€‚å¼€å…³é—¨ï¼Œç¡è§‰çš„æ•°æ®ä¸º0ï¼Œç¾Šåƒè‰çš„æ•°æ®ä¸º2)
+
+µ±ÃÅ(Ä¾ÃÅ,Õ¤À¸ÃÅ,ÏİÚåÃÅ)±»´ò¿ª»ò¹Ø±ÕÊ±»á´¥·¢
+
+µ±Ñò³Ôµô²İÊ±´¥·¢
+
+Ë¯¾õÊ±´¥·¢
+
+entity:¶¯×÷µÄÊµÌå(¹Û²âÊı¾İ¡£×ÜÊÇÎª0)
+
+eventType:ÊÂ¼şÀàĞÍ(¹Û²âÊı¾İ¡£¿ª¹ØÃÅÊı¾İÎª1003£¬Ñò³Ô²İµÄÊı¾İÎª2001,Ë¯¾õµÄÊı¾İÎª9800)
+
+x,y,z:±»µã»÷µÄÃÅ·½¿éµÄ×ø±ê£¬±»³ÔµôµÄ²İ·½¿éµÄ×ø±ê£¬Ë¯¾õÊ±Îª(0,0,0)
+
+data:Î´Öª(¹Û²âÊı¾İ¡£¿ª¹ØÃÅ£¬Ë¯¾õµÄÊı¾İÎª0£¬Ñò³Ô²İµÄÊı¾İÎª2)
+
 11.function blockEventHook(x,y,z,eventType,data){}
-æ¯ä¸‰ç§’æ£€æŸ¥æ‰€æœ‰ç®±å­çš„å¼€å…³çŠ¶æ€
-x,y,z:ç®±å­çš„åæ ‡
-eventType:äº‹ä»¶ç±»å‹(è§‚æµ‹æ•°æ®ä¸º1)
-data:æœªçŸ¥(è§‚æµ‹æ•°æ®ã€‚å…³é—­ä¸º0ï¼Œæ‰“å¼€ä¸º1ï¼Œæ‰“å¼€è¿‡ç¨‹ä¸­ä¸º2(å¾…ç¡®è®¤)ã€‚æ£€æŸ¥å¤§ç®±å­æ—¶ç¬¬äºŒä¸ªè¢«æ”¾ç½®çš„ç®±å­æ•°å€¼æ”¹å˜ï¼Œå¦ä¸€ä¸ªä¸€ç›´ä¸º0)
+
+Ã¿ÈıÃë¼ì²éËùÓĞÏä×ÓµÄ¿ª¹Ø×´Ì¬
+
+x,y,z:Ïä×ÓµÄ×ø±ê
+
+eventType:ÊÂ¼şÀàĞÍ(¹Û²âÊı¾İÎª1)
+
+data:Î´Öª(¹Û²âÊı¾İ¡£¹Ø±ÕÎª0£¬´ò¿ªÎª1£¬´ò¿ª¹ı³ÌÖĞÎª2(´ıÈ·ÈÏ)¡£¼ì²é´óÏä×ÓÊ±µÚ¶ş¸ö±»·ÅÖÃµÄÏä×ÓÊıÖµ¸Ä±ä£¬ÁíÒ»¸öÒ»Ö±Îª0)
+
 12.function destroyBlock(x,y,z,side){}
-å½“ä¸€ä¸ªæ–¹å—è¢«ç ´åæ—¶ä¼šè§¦å‘
-x,y,z:æ–¹å—çš„åæ ‡
-side:æ–¹å—è¢«ä»å“ªä¸ªæ–¹å‘ç ´å
-äºŒ.æ–‡å­—æ˜¾ç¤ºå‡½æ•°
-ä¹Ÿå°±æ˜¯åœ¨æ¸¸æˆä¸­ç°å®æ–‡å­—çš„å‡½æ•°ï¼Œä¹Ÿæ¯”è¾ƒå¸¸ç”¨ã€‚
+
+µ±Ò»¸ö·½¿é±»ÆÆ»µÊ±»á´¥·¢
+
+x,y,z:·½¿éµÄ×ø±ê
+
+side:·½¿é±»´ÓÄÄ¸ö·½ÏòÆÆ»µ
+
+¶ş.ÎÄ×ÖÏÔÊ¾º¯Êı
+
+Ò²¾ÍÊÇÔÚÓÎÏ·ÖĞÏÖÊµÎÄ×ÖµÄº¯Êı£¬Ò²±È½Ï³£ÓÃ¡£
+
 1.print(text);
-å°†æ•°æ®æ˜¾ç¤ºåœ¨æµ®åŠ¨çª—å£é‡Œ
-textå¯ä»¥æ˜¯éå®ä½“å˜é‡æˆ–è¢«"æ‹¬èµ·æ¥çš„å­—ç¬¦ä¸²
-å¦‚print("text");
+
+½«Êı¾İÏÔÊ¾ÔÚ¸¡¶¯´°¿ÚÀï
+
+text¿ÉÒÔÊÇ·ÇÊµÌå±äÁ¿»ò±»"À¨ÆğÀ´µÄ×Ö·û´®
+
+Èçprint("text");
+
 2.clientMessage(text);
-å°†æ•°æ®æ˜¾ç¤ºåœ¨èŠå¤©æ¡†é‡Œ
-textå¯ä»¥æ˜¯éå®ä½“å˜é‡æˆ–è¢«"æ‹¬èµ·æ¥çš„å­—ç¬¦ä¸²
-å¦‚clientMessage("text");
-é¢œè‰² clientMessage(ChatColor.é¢œè‰²+text);
-ä¾‹å­:clientMessage(ChatColor.YELLOW + "It's the " + ChatColor.RED + "Red " + ChatColor.GREEN + "Green " + ChatColor.YELLOW + "show!");
-é¢œè‰²è¡¨:BLACK,DARK_BLUE,DARK_GREEN,DARK_AQUA,DARK_RED,DARK_PURPLE,GOLD,GRAY,DARK_GRAY,BLUE,GREEN,AQUA,RED,LIGHT_PURPLE,YELLOW,WHITE
-ä¸‰.è·å–åæ ‡å‡½æ•°
-å³åœ¨æ¸¸æˆä¸­è·å–ä¸€ä¸ªåæ ‡ï¼Œå¹¶ä½¿ç”¨ã€‚
+
+½«Êı¾İÏÔÊ¾ÔÚÁÄÌì¿òÀï
+
+text¿ÉÒÔÊÇ·ÇÊµÌå±äÁ¿»ò±»"À¨ÆğÀ´µÄ×Ö·û´®
+
+ÈçclientMessage("text");
+
+ÑÕÉ« clientMessage(ChatColor.ÑÕÉ«+text);
+
+Àı×Ó:clientMessage(ChatColor.YELLOW + "It's the " + ChatColor.RED + "Red " + ChatColor.GREEN + "Green " + ChatColor.YELLOW + "show!");
+
+ÑÕÉ«±í:BLACK,DARK_BLUE,DARK_GREEN,DARK_AQUA,DARK_RED,DARK_PURPLE,GOLD,GRAY,DARK_GRAY,BLUE,GREEN,AQUA,RED,LIGHT_PURPLE,YELLOW,WHITE
+
+Èı.»ñÈ¡×ø±êº¯Êı
+
+¼´ÔÚÓÎÏ·ÖĞ»ñÈ¡Ò»¸ö×ø±ê£¬²¢Ê¹ÓÃ¡£
+
 1.getPlayerX();getPlayerY();getPlayerZ();
-è·å–ç©å®¶çš„x,y,zåæ ‡
+
+»ñÈ¡Íæ¼ÒµÄx,y,z×ø±ê
+
 2.getPlayerEnt();
-è·å–ç©å®¶çš„å®ä½“
+
+»ñÈ¡Íæ¼ÒµÄÊµÌå
+
 3.getYaw(ent);
-è·å–å®ä½“entçš„å¤´éƒ¨æ‰€æœå‘(å·¦å³)çš„è§’åº¦å€¼
-entä¸ºç©ºæ—¶é»˜è®¤ä¸ºç©å®¶
-é¢å‘zè½´æ­£æ–¹å‘æ˜¯æ—¶ä¸º0Â±360nï¼Œé¢å‘xè½´è´Ÿæ–¹å‘æ—¶ä¸º90Â±360n
+
+»ñÈ¡ÊµÌåentµÄÍ·²¿Ëù³¯Ïò(×óÓÒ)µÄ½Ç¶ÈÖµ
+
+entÎª¿ÕÊ±Ä¬ÈÏÎªÍæ¼Ò
+
+ÃæÏòzÖáÕı·½ÏòÊÇÊ±Îª0¡À360n£¬ÃæÏòxÖá¸º·½ÏòÊ±Îª90¡À360n
+
 4.getPitch(ent);
-è·å–å®ä½“entçš„å¤´éƒ¨æ‰€æœå‘(ä¸Šä¸‹)çš„è§’åº¦å€¼
-entä¸ºç©ºæ—¶é»˜è®¤ä¸ºç©å®¶
-é¢å‘yè½´æ­£æ–¹å‘æ—¶ä¸º-90ï¼Œé¢å‘yè½´è´Ÿæ–¹å‘æ—¶ä¸º90
+
+»ñÈ¡ÊµÌåentµÄÍ·²¿Ëù³¯Ïò(ÉÏÏÂ)µÄ½Ç¶ÈÖµ
+
+entÎª¿ÕÊ±Ä¬ÈÏÎªÍæ¼Ò
+
+ÃæÏòyÖáÕı·½ÏòÊ±Îª-90£¬ÃæÏòyÖá¸º·½ÏòÊ±Îª90
+
 5.getCarriedItem();
-è·å–ç©å®¶æ‰‹é‡Œæ­£åœ¨æ‹¿ç€çš„ç‰©å“æˆ–æ–¹å—çš„id
+
+»ñÈ¡Íæ¼ÒÊÖÀïÕıÔÚÄÃ×ÅµÄÎïÆ·»ò·½¿éµÄid
+
 6.getTile(x,y,z);
-è·å–åæ ‡ä¸º(x,y,z)çš„æ–¹å—çš„id
-å››.å®ä½“è®¾ç½®å‡½æ•°
-å¯¹æŸä¸ªå®ä½“è®¾ç½®æŸç§äº‹ä»¶ï¼Œå¹¶å°†å…¶è§¦å‘ã€‚
+
+»ñÈ¡×ø±êÎª(x,y,z)µÄ·½¿éµÄid
+
+ËÄ.ÊµÌåÉèÖÃº¯Êı
+
+¶ÔÄ³¸öÊµÌåÉèÖÃÄ³ÖÖÊÂ¼ş£¬²¢½«Æä´¥·¢¡£
+
 1.setPosition(ent,x,y,z);
-å°†ä¸€ä¸ªå®ä½“entçš„åæ ‡è®¾ç½®ä¸º(x,y,z)
-ent:ç›®æ ‡å®ä½“
-x,y,z:ç›®æ ‡åæ ‡
+
+½«Ò»¸öÊµÌåentµÄ×ø±êÉèÖÃÎª(x,y,z)
+
+ent:Ä¿±êÊµÌå
+
+x,y,z:Ä¿±ê×ø±ê
+
 2.setPositionRelative(ent,x,y,z);
-è®¾ç½®æŒ‡å®šå®ä½“å¯¹äºç©å®¶çš„ç›¸å¯¹ä½ç½®
-ent:ç›®æ ‡å®ä½“
-x,y,z:ç›¸å¯¹åæ ‡
+
+ÉèÖÃÖ¸¶¨ÊµÌå¶ÔÓÚÍæ¼ÒµÄÏà¶ÔÎ»ÖÃ
+
+ent:Ä¿±êÊµÌå
+
+x,y,z:Ïà¶Ô×ø±ê
+
 3.setRot(ent,yaw,pitch);
-å°†ä¸€ä¸ªå®ä½“çš„å¤´éƒ¨æ–¹å‘è®¾ä¸º(yaw,pitch)
-ent:ç›®æ ‡å®ä½“
-yaw:æ°´å¹³è§’åº¦
-pitch:å‚ç›´è§’åº¦
+
+½«Ò»¸öÊµÌåµÄÍ·²¿·½ÏòÉèÎª(yaw,pitch)
+
+ent:Ä¿±êÊµÌå
+
+yaw:Ë®Æ½½Ç¶È
+
+pitch:´¹Ö±½Ç¶È
+
 4.setVelX(ent,velocity);setVelY(ent,velocity);setVelZ(ent,velocity);
-å°†ä¸€ä¸ªå®ä½“entçš„x/y/zè½´é€Ÿåº¦è®¾ä¸ºvelocity
-ent:ç›®æ ‡å®ä½“
-velocity:é€Ÿåº¦
+
+½«Ò»¸öÊµÌåentµÄx/y/zÖáËÙ¶ÈÉèÎªvelocity
+
+ent:Ä¿±êÊµÌå
+
+velocity:ËÙ¶È
+
 5.setTile(x,y,z,blockID,damageValue);
-å°†ç‰¹å®šçš„æ–¹å—æ”¾ç½®
-x,y,z:æ”¾ç½®çš„åæ ‡
-blockId:æ”¾ç½®æ–¹å—çš„id
-damageValue:æ”¾ç½®æ–¹å—çš„é™„åŠ å€¼(ä¼¤å®³å€¼)
+
+½«ÌØ¶¨µÄ·½¿é·ÅÖÃ
+
+x,y,z:·ÅÖÃµÄ×ø±ê
+
+blockId:·ÅÖÃ·½¿éµÄid
+
+damageValue:·ÅÖÃ·½¿éµÄ¸½¼ÓÖµ(ÉËº¦Öµ)
+
 6.setPlayerHealth(halfHearts);
-è®¾ç½®ç©å®¶çš„è¡€é‡
-helfHearts:åŠå¿ƒé‡ï¼Œ20æ—¶ä¸ºæ»¡è¡€ï¼Œä½†å¯ä»¥æ›´é«˜(<=255)
+
+ÉèÖÃÍæ¼ÒµÄÑªÁ¿
+
+helfHearts:°ëĞÄÁ¿£¬20Ê±ÎªÂúÑª£¬µ«¿ÉÒÔ¸ü¸ß(<=255)
+
 7.setNightMode(boolean);
-å¤œæ™šæ¨¡å¼ã€‚æ­¤å‡½æ•°å°šæœªè¢«è¯å®èƒ½æ­£å¸¸ä½¿ç”¨ï¼Œä½†å­˜åœ¨äºæºç ä¸­
-boolean:å¸ƒæœ—å€¼ï¼Œåªèƒ½ä¸ºtrueæˆ–false
-äº”.å®ä½“ç”Ÿæˆ(spawn)å‡½æ•°
-å¦‚é¢˜ï¼Œæˆ‘ä¸å¤šè¯´ã€‚
+
+Ò¹ÍíÄ£Ê½¡£´Ëº¯ÊıÉĞÎ´±»Ö¤ÊµÄÜÕı³£Ê¹ÓÃ£¬µ«´æÔÚÓÚÔ´ÂëÖĞ
+
+boolean:²¼ÀÊÖµ£¬Ö»ÄÜÎªtrue»òfalse
+
+Îå.ÊµÌåÉú³É(spawn)º¯Êı
+
+ÈçÌâ£¬ÎÒ²»¶àËµ¡£
+
 1.spawnCow(x,y,z,"image");spawnChicken(x,y,z,"image");
-åœ¨ç‰¹å®šä½ç½®ç”Ÿæˆä¸€åªç‰›/é¸¡ï¼Œå¹¶å°†è´´å›¾æ¢æˆimage
-x,y,z:ç”Ÿæˆmodçš„åæ ‡
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
+
+ÔÚÌØ¶¨Î»ÖÃÉú³ÉÒ»Ö»Å£/¼¦£¬²¢½«ÌùÍ¼»»³Éimage
+
+x,y,z:Éú³ÉmodµÄ×ø±ê
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
 2.spawnPigZombie(x,y,z,heldItemID,"image");
-åœ¨ç‰¹å®šä½ç½®ç”Ÿæˆä¸€åªåƒµå°¸çŒªäººï¼Œå¹¶å°†è´´å›¾æ¢æˆimage
-x,y,z:ç”Ÿæˆmodçš„åæ ‡
-heldItemID:çŒªäººæ‰‹é‡Œæ‹¿çš„ç‰©å“id
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
-å…­.æ‚é¡¹å‡½æ•°
-ä¸€äº›äº”èŠ±å…«é—¨çš„æ‚é¡¹å‡½æ•°ã€‚
+
+ÔÚÌØ¶¨Î»ÖÃÉú³ÉÒ»Ö»½©Ê¬ÖíÈË£¬²¢½«ÌùÍ¼»»³Éimage
+
+x,y,z:Éú³ÉmodµÄ×ø±ê
+
+heldItemID:ÖíÈËÊÖÀïÄÃµÄÎïÆ·id
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
+Áù.ÔÓÏîº¯Êı
+
+Ò»Ğ©Îå»¨°ËÃÅµÄÔÓÏîº¯Êı¡£
+
 1.explode(x,y,z,radius);
-åœ¨åæ ‡ä¸º(x,y,z)å¤„å¼•å‘ä¸€åœºåŠå¾„ä¸ºradiusçš„çˆ†ç‚¸
+
+ÔÚ×ø±êÎª(x,y,z)´¦Òı·¢Ò»³¡°ë¾¶ÎªradiusµÄ±¬Õ¨
+
 2.rideAnimal(player,target);
-è®©playeréª‘åœ¨targetèº«ä¸Š
-player,targetä¸ºå®ä½“
+
+ÈÃplayerÆïÔÚtargetÉíÉÏ
+
+player,targetÎªÊµÌå
+
 3.addItemInventory(ID,amount,damageValue);
-åœ¨èƒŒåŒ…é‡Œæ·»åŠ amountä¸ªidä¸ºIDï¼Œé™„åŠ å€¼(ä¼¤å®³å€¼)ä¸ºdamageValueçš„ç‰©å“
-amountå¯ä»¥ä¸ºè´Ÿ
+
+ÔÚ±³°üÀïÌí¼Óamount¸öidÎªID£¬¸½¼ÓÖµ(ÉËº¦Öµ)ÎªdamageValueµÄÎïÆ·
+
+amount¿ÉÒÔÎª¸º
+
 4.preventDefault();
-é˜»æ­¢åŸæœ‰åŠ¨ä½œ
-ä¸ƒ.å¯åŠ¨å™¨(BlockLauncher-only)å‡½æ•°
-è¿™äº›å‡½æ•°åªèƒ½åœ¨BlockLauncherå¯åŠ¨å™¨é‡Œä½¿ç”¨
-1.bl_spawnMob(x,y,z,mobID,"image");(åœç”¨ï¼Œè¯·ä½¿ç”¨Level.spawnMob)
-åœ¨ç‰¹å®šä½ç½®ç”Ÿæˆä¸€ä¸ªå®ä½“ï¼Œå¹¶æ›¿æ¢è´´å›¾
-x,y,z:æŒ‡å®šä½ç½®
-mobID:å®ä½“ç±»åˆ«id
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
+
+×èÖ¹Ô­ÓĞ¶¯×÷
+
+Æß.Æô¶¯Æ÷(BlockLauncher-only)º¯Êı
+
+ÕâĞ©º¯ÊıÖ»ÄÜÔÚBlockLauncherÆô¶¯Æ÷ÀïÊ¹ÓÃ
+
+1.bl_spawnMob(x,y,z,mobID,"image");(Í£ÓÃ£¬ÇëÊ¹ÓÃLevel.spawnMob)
+
+ÔÚÌØ¶¨Î»ÖÃÉú³ÉÒ»¸öÊµÌå£¬²¢Ìæ»»ÌùÍ¼
+
+x,y,z:Ö¸¶¨Î»ÖÃ
+
+mobID:ÊµÌåÀà±ğid
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
 2.bl_setMobSkin(mob,"image");
-å°†æŒ‡å®šå®ä½“çš„è´´å›¾æ›´æ¢
-mob:æŒ‡å®šçš„å®ä½“(ä¸æ˜¯å®ä½“ç±»åˆ«)
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
-å…«.Levelå‡½æ•°
+
+½«Ö¸¶¨ÊµÌåµÄÌùÍ¼¸ü»»
+
+mob:Ö¸¶¨µÄÊµÌå(²»ÊÇÊµÌåÀà±ğ)
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
+°Ë.Levelº¯Êı
+
 Level.explode(x,y,z,radius);
-åœ¨åæ ‡ä¸º(x,y,z)å¤„å¼•å‘ä¸€åœºåŠå¾„ä¸ºradiusçš„çˆ†ç‚¸
-ä¸explode(x,y,z,radius)ç›¸åŒ
+
+ÔÚ×ø±êÎª(x,y,z)´¦Òı·¢Ò»³¡°ë¾¶ÎªradiusµÄ±¬Õ¨
+
+Óëexplode(x,y,z,radius)ÏàÍ¬
+
 Level.getTile(x,y,z);
-è·å–åæ ‡ä¸º(x,y,z)çš„æ–¹å—çš„id
-å’ŒgetTile(x,y,z);ç›¸åŒ
+
+»ñÈ¡×ø±êÎª(x,y,z)µÄ·½¿éµÄid
+
+ºÍgetTile(x,y,z);ÏàÍ¬
+
 Level.setTile(x,y,z,blockID);
-æ”¾ç½®æ–¹å—
-å’ŒsetTile(x,y,z,blockID);ç›¸åŒ
+
+·ÅÖÃ·½¿é
+
+ºÍsetTile(x,y,z,blockID);ÏàÍ¬
+
 Level.getData(x,y,z);
-è·å–åæ ‡ä¸º(x,y,z)çš„æ–¹å—çš„ä¼¤å®³å€¼(é™„åŠ å€¼)
+
+»ñÈ¡×ø±êÎª(x,y,z)µÄ·½¿éµÄÉËº¦Öµ(¸½¼ÓÖµ)
+
 Level.getWorldDir();
-è¿”å›å½“å‰ä¸–ç•Œæ‰€åœ¨çš„æ–‡ä»¶å¤¹çš„åå­—
+
+·µ»Øµ±Ç°ÊÀ½çËùÔÚµÄÎÄ¼ş¼ĞµÄÃû×Ö
+
 Level.getWorldName();
-è¿”å›å½“å‰ä¸–ç•Œçš„åå­—
+
+·µ»Øµ±Ç°ÊÀ½çµÄÃû×Ö
+
 Level.spawnChicken(x,y,z,"image");Level.spawnCow(x,y,z,"image");
-åœ¨ç‰¹å®šä½ç½®ç”Ÿæˆä¸€åªç‰›/é¸¡ï¼Œå¹¶å°†è´´å›¾æ¢æˆimage
-x,y,z:ç”Ÿæˆmodçš„åæ ‡
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
-å’ŒspawnCow(x,y,z,"image");spawnChicken(x,y,z,"image");ç›¸åŒ
+
+ÔÚÌØ¶¨Î»ÖÃÉú³ÉÒ»Ö»Å£/¼¦£¬²¢½«ÌùÍ¼»»³Éimage
+
+x,y,z:Éú³ÉmodµÄ×ø±ê
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
+ºÍspawnCow(x,y,z,"image");spawnChicken(x,y,z,"image");ÏàÍ¬
+
 Level.destroyBlock(x,y,z,shouldDropItem);
-ç ´åä¸€ä¸ªæ–¹å—ï¼Œæ‹¥æœ‰æ­£å¸¸ç ´åæ—¶çš„æ‰€æœ‰ç‰¹æ•ˆ
-x,y,z:æ–¹å—åæ ‡
-shouldDropItem:æ˜¯å¦æ‰è½è¢«ç ´åçš„æ–¹å—æœ¬èº«ã€‚å¸ƒå°”å€¼ï¼Œåªèƒ½ä¸ºtrue/false
+
+ÆÆ»µÒ»¸ö·½¿é£¬ÓµÓĞÕı³£ÆÆ»µÊ±µÄËùÓĞÌØĞ§
+
+x,y,z:·½¿é×ø±ê
+
+shouldDropItem:ÊÇ·ñµôÂä±»ÆÆ»µµÄ·½¿é±¾Éí¡£²¼¶ûÖµ£¬Ö»ÄÜÎªtrue/false
+
 Level.dropItem(x,y,z,range,id,count,damage);
-ä»æŒ‡å®šåæ ‡æ‰è½æ–¹å—
-x,y,z:æŒ‡å®šåæ ‡
-range;æ‰è½çš„è·ç¦»
-id:æ‰è½ç‰©id
-count:æ‰è½ç‰©æ•°é‡
-damage:æ‰è½ç‰©ä¼¤å®³å€¼
+
+´ÓÖ¸¶¨×ø±êµôÂä·½¿é
+
+x,y,z:Ö¸¶¨×ø±ê
+
+range;µôÂäµÄ¾àÀë
+
+id:µôÂäÎïid
+
+count:µôÂäÎïÊıÁ¿
+
+damage:µôÂäÎïÉËº¦Öµ
+
 Level.getAddress();
-ç”¨é€”ä¸æ˜ã€‚ã€‚
-è¿”å›å€¼æ˜¯å®ä½“ã€‚ã€‚
+
+ÓÃÍ¾²»Ã÷¡£¡£
+
+·µ»ØÖµÊÇÊµÌå¡£¡£
+
 Level.getChestSlot(x,y,z,slot);
-è¯»å–æŒ‡å®šç®±å­æŒ‡å®šä½ç½®çš„ç‰©å“id
-x,y,z:ç®±å­åæ ‡
-slot:ç‰©å“ä½ç½®
+
+¶ÁÈ¡Ö¸¶¨Ïä×ÓÖ¸¶¨Î»ÖÃµÄÎïÆ·id
+
+x,y,z:Ïä×Ó×ø±ê
+
+slot:ÎïÆ·Î»ÖÃ
+
 Level.getChestSlotCount(x,y,z,slot);
-è¯»å–æŒ‡å®šç®±å­æŒ‡å®šä½ç½®çš„ç‰©å“æ•°é‡
-x,y,z:ç®±å­åæ ‡
-slot:ç‰©å“ä½ç½®
+
+¶ÁÈ¡Ö¸¶¨Ïä×ÓÖ¸¶¨Î»ÖÃµÄÎïÆ·ÊıÁ¿
+
+x,y,z:Ïä×Ó×ø±ê
+
+slot:ÎïÆ·Î»ÖÃ
+
 Level.getChestSlotData(x,y,z,slot);
-è¯»å–æŒ‡å®šç®±å­æŒ‡å®šä½ç½®çš„ç‰©å“ä¼¤å®³å€¼(é™„åŠ å€¼)
-x,y,z:ç®±å­åæ ‡
-slot:ç‰©å“ä½ç½®
+
+¶ÁÈ¡Ö¸¶¨Ïä×ÓÖ¸¶¨Î»ÖÃµÄÎïÆ·ÉËº¦Öµ(¸½¼ÓÖµ)
+
+x,y,z:Ïä×Ó×ø±ê
+
+slot:ÎïÆ·Î»ÖÃ
+
 Level.setChestSlot(x,y,z,slot,id,damage,amount);
-å‘ç®±å­æŒ‡å®šä½ç½®æ”¾ç½®ç‰©å“
-x,y,z:ç®±å­åæ ‡
-slot:ç‰©å“ä½ç½®
-id,damage,amount:ç‰©å“idï¼Œä¼¤å®³å€¼ï¼Œæ•°é‡
+
+ÏòÏä×ÓÖ¸¶¨Î»ÖÃ·ÅÖÃÎïÆ·
+
+x,y,z:Ïä×Ó×ø±ê
+
+slot:ÎïÆ·Î»ÖÃ
+
+id,damage,amount:ÎïÆ·id£¬ÉËº¦Öµ£¬ÊıÁ¿
+
 Level.getGameMode();
-è·å–æ¸¸æˆæ¨¡å¼ã€‚ç”Ÿå­˜ä¸º0ï¼Œåˆ›é€ ä¸º1ã€‚
+
+»ñÈ¡ÓÎÏ·Ä£Ê½¡£Éú´æÎª0£¬´´ÔìÎª1¡£
+
 Level.setGameMode(mode);
-è®¾ç½®æ¸¸æˆæ¨¡å¼ã€‚ç”Ÿå­˜ä¸º0ï¼Œåˆ›é€ ä¸º1ã€‚
+
+ÉèÖÃÓÎÏ·Ä£Ê½¡£Éú´æÎª0£¬´´ÔìÎª1¡£
+
 Level.getTime();
-è·å–å½“å‰æ—¶é—´ã€‚0ä¸ºæ­£åˆï¼Œ7200ä¸ºæ—¥è½ï¼Œ8280ä¸ºæ™šä¸Šï¼Œ13320ä¸ºæ—¥å‡ºã€‚
+
+»ñÈ¡µ±Ç°Ê±¼ä¡£0ÎªÕıÎç£¬7200ÎªÈÕÂä£¬8280ÎªÍíÉÏ£¬13320ÎªÈÕ³ö¡£
+
 Level.setTime(time);
-è®¾ç½®æ—¶é—´ã€‚0ä¸ºæ­£åˆï¼Œ7200ä¸ºæ—¥è½ï¼Œ8280ä¸ºæ™šä¸Šï¼Œ13320ä¸ºæ—¥å‡ºã€‚
+
+ÉèÖÃÊ±¼ä¡£0ÎªÕıÎç£¬7200ÎªÈÕÂä£¬8280ÎªÍíÉÏ£¬13320ÎªÈÕ³ö¡£
+
 Level.getSignText(x,y,z,line);
-è·å–æŒ‡å®šç‰Œå­çš„å†…å®¹ï¼Œä¸ºç©ºæ—¶è¿”å›null
-x,y,z:ç‰Œå­çš„åæ ‡
-line:è·å–çš„è¡Œæ•°ï¼Œç¬¬ä¸€è¡Œä¸º0
+
+»ñÈ¡Ö¸¶¨ÅÆ×ÓµÄÄÚÈİ£¬Îª¿ÕÊ±·µ»Ønull
+
+x,y,z:ÅÆ×ÓµÄ×ø±ê
+
+line:»ñÈ¡µÄĞĞÊı£¬µÚÒ»ĞĞÎª0
+
 Level.setSignText(x,y,z,line,"text");
-è®¾ç½®æŒ‡å®šç‰Œå­çš„å†…å®¹
-x,y,z:ç‰Œå­çš„åæ ‡
-line:è®¾ç½®çš„è¡Œæ•°ï¼Œç¬¬ä¸€è¡Œä¸º0
-text:å†…å®¹ã€‚å¿…é¡»æ˜¯å­—ç¬¦ä¸²
+
+ÉèÖÃÖ¸¶¨ÅÆ×ÓµÄÄÚÈİ
+
+x,y,z:ÅÆ×ÓµÄ×ø±ê
+
+line:ÉèÖÃµÄĞĞÊı£¬µÚÒ»ĞĞÎª0
+
+text:ÄÚÈİ¡£±ØĞëÊÇ×Ö·û´®
+
 Level.playSound(x,y,z,sound,volume,pitch);
-æ’­æ”¾å£°éŸ³
-x,y,z:æŒ‡å®šåæ ‡
-sound:MCPEä¸­çš„å£°éŸ³
-volume:éŸ³é‡
-pitch:è§’åº¦ï¼Œç”¨é€”ä¸æ˜
+
+²¥·ÅÉùÒô
+
+x,y,z:Ö¸¶¨×ø±ê
+
+sound:MCPEÖĞµÄÉùÒô
+
+volume:ÒôÁ¿
+
+pitch:½Ç¶È£¬ÓÃÍ¾²»Ã÷
+
 Level.playSoundEnt(ent,sound,volume,pitch);
-ent:è‡ªç„¶å®ä½“
-sound:MCPEä¸­çš„å£°éŸ³
-volume:éŸ³é‡
-pitch:è§’åº¦ï¼Œç”¨é€”ä¸æ˜
+
+ent:×ÔÈ»ÊµÌå
+
+sound:MCPEÖĞµÄÉùÒô
+
+volume:ÒôÁ¿
+
+pitch:½Ç¶È£¬ÓÃÍ¾²»Ã÷
+
 Level.setNightMode(boolean);
-å¤œæ™šæ¨¡å¼ã€‚æ­¤å‡½æ•°å°šæœªè¢«è¯å®èƒ½æ­£å¸¸ä½¿ç”¨ï¼Œä½†å­˜åœ¨äºæºç ä¸­
-boolean:å¸ƒæœ—å€¼ï¼Œåªèƒ½ä¸ºtrueæˆ–false
-ä¸setNightMode(boolean)ç›¸åŒ
+
+Ò¹ÍíÄ£Ê½¡£´Ëº¯ÊıÉĞÎ´±»Ö¤ÊµÄÜÕı³£Ê¹ÓÃ£¬µ«´æÔÚÓÚÔ´ÂëÖĞ
+
+boolean:²¼ÀÊÖµ£¬Ö»ÄÜÎªtrue»òfalse
+
+ÓësetNightMode(boolean)ÏàÍ¬
+
 Level.setSpawn(x,y,z);
-è®¾ç½®å¤æ´»ç‚¹
+
+ÉèÖÃ¸´»îµã
+
 Level.setTile(x,y,z,blockID);
-å°†ç‰¹å®šçš„æ–¹å—æ”¾ç½®
-x,y,z:æ”¾ç½®çš„åæ ‡
-blockId:æ”¾ç½®æ–¹å—çš„id
-å’ŒsetTile(x,y,z,blockID)ç›¸åŒ
-ä¹.Playerå‡½æ•°
+
+½«ÌØ¶¨µÄ·½¿é·ÅÖÃ
+
+x,y,z:·ÅÖÃµÄ×ø±ê
+
+blockId:·ÅÖÃ·½¿éµÄid
+
+ºÍsetTile(x,y,z,blockID)ÏàÍ¬
+
+¾Å.Playerº¯Êı
+
 Player.addItemInventory(ID,amount,damage);
-åœ¨èƒŒåŒ…é‡Œæ·»åŠ amountä¸ªidä¸ºIDï¼Œé™„åŠ å€¼(ä¼¤å®³å€¼)ä¸ºdamageValueçš„ç‰©å“
-amountå¯ä»¥ä¸ºè´Ÿ
-å’ŒaddItemInventory(ID,amount,damage)ç›¸åŒ
+
+ÔÚ±³°üÀïÌí¼Óamount¸öidÎªID£¬¸½¼ÓÖµ(ÉËº¦Öµ)ÎªdamageValueµÄÎïÆ·
+
+amount¿ÉÒÔÎª¸º
+
+ºÍaddItemInventory(ID,amount,damage)ÏàÍ¬
+
 Player.clearInventorySlot(slot);
-æ¸…é™¤èƒŒåŒ…é‡ŒæŒ‡å®šä½ç½®çš„ç‰©å“
-slot:ç‰©å“åœ¨èƒŒåŒ…çš„ä½ç½®
+
+Çå³ı±³°üÀïÖ¸¶¨Î»ÖÃµÄÎïÆ·
+
+slot:ÎïÆ·ÔÚ±³°üµÄÎ»ÖÃ
+
 Player.getInventorySlot(slot);
-è·å–èƒŒåŒ…é‡ŒæŒ‡å®šä½ç½®çš„ç‰©å“id
-slot:ç‰©å“åœ¨èƒŒåŒ…çš„ä½ç½®
+
+»ñÈ¡±³°üÀïÖ¸¶¨Î»ÖÃµÄÎïÆ·id
+
+slot:ÎïÆ·ÔÚ±³°üµÄÎ»ÖÃ
+
 Player.getInventorySlotCount(slot);
-è·å–èƒŒåŒ…é‡ŒæŒ‡å®šä½ç½®çš„ç‰©å“æ•°é‡
-slot:ç‰©å“åœ¨èƒŒåŒ…çš„ä½ç½®
+
+»ñÈ¡±³°üÀïÖ¸¶¨Î»ÖÃµÄÎïÆ·ÊıÁ¿
+
+slot:ÎïÆ·ÔÚ±³°üµÄÎ»ÖÃ
+
 Player.getInventorySlotData(slot);
-è·å–èƒŒåŒ…é‡ŒæŒ‡å®šä½ç½®çš„ç‰©å“ä¼¤å®³å€¼(é™„åŠ å€¼)
-slot:ç‰©å“åœ¨èƒŒåŒ…çš„ä½ç½®
+
+»ñÈ¡±³°üÀïÖ¸¶¨Î»ÖÃµÄÎïÆ·ÉËº¦Öµ(¸½¼ÓÖµ)
+
+slot:ÎïÆ·ÔÚ±³°üµÄÎ»ÖÃ
+
 Player.getSelectedSlotId();
-è·å–è¢«é€‰ä¸­çš„ç‰©å“æ çš„id(slot)
+
+»ñÈ¡±»Ñ¡ÖĞµÄÎïÆ·À¸µÄid(slot)
+
 Player.getArmorSlot(slot);
-è·å–èº«ä¸Šçš„æŒ‡å®šè£…å¤‡id
-slot:è£…å¤‡ä½ç½®
+
+»ñÈ¡ÉíÉÏµÄÖ¸¶¨×°±¸id
+
+slot:×°±¸Î»ÖÃ
+
 Player.getArmorSlotDamage(slot);
-è·å–èº«ä¸ŠæŒ‡å®šè£…å¤‡çš„ä¼¤å®³å€¼(è€ä¹…)
-slot:è£…å¤‡ä½ç½®
+
+»ñÈ¡ÉíÉÏÖ¸¶¨×°±¸µÄÉËº¦Öµ(ÄÍ¾Ã)
+
+slot:×°±¸Î»ÖÃ
+
 Player.setArmorSlot(slot,id,damage);
-è®¾ç½®èº«ä¸Šçš„è£…å¤‡
-slot:è£…å¤‡çš„ä½ç½®
-id:è£…å¤‡id
-damage:è£…å¤‡ä¼¤å®³å€¼(é™„åŠ å€¼)
+
+ÉèÖÃÉíÉÏµÄ×°±¸
+
+slot:×°±¸µÄÎ»ÖÃ
+
+id:×°±¸id
+
+damage:×°±¸ÉËº¦Öµ(¸½¼ÓÖµ)
+
 Player.getCarriedItem();
-è·å–ç©å®¶æ‰‹é‡Œæ­£åœ¨æ‹¿ç€çš„ç‰©å“æˆ–æ–¹å—çš„id
-å’ŒgetCarriedItem()ç›¸åŒ
+
+»ñÈ¡Íæ¼ÒÊÖÀïÕıÔÚÄÃ×ÅµÄÎïÆ·»ò·½¿éµÄid
+
+ºÍgetCarriedItem()ÏàÍ¬
+
 Player.getCarriedItemCount();
-è·å–ç©å®¶æ‰‹é‡Œæ­£åœ¨æ‹¿ç€çš„ç‰©å“æˆ–æ–¹å—çš„æ•°é‡
+
+»ñÈ¡Íæ¼ÒÊÖÀïÕıÔÚÄÃ×ÅµÄÎïÆ·»ò·½¿éµÄÊıÁ¿
+
 Player.getCarriedItemData();
-è·å–ç©å®¶æ‰‹é‡Œæ­£åœ¨æ‹¿ç€çš„ç‰©å“æˆ–æ–¹å—çš„ä¼¤å®³å€¼(é™„åŠ å€¼)
+
+»ñÈ¡Íæ¼ÒÊÖÀïÕıÔÚÄÃ×ÅµÄÎïÆ·»ò·½¿éµÄÉËº¦Öµ(¸½¼ÓÖµ)
+
 Player.getEntity();
-è·å–ç©å®¶çš„å®ä½“
-å’ŒgetPlayerEnt()ç›¸åŒ
+
+»ñÈ¡Íæ¼ÒµÄÊµÌå
+
+ºÍgetPlayerEnt()ÏàÍ¬
+
 Player.getX();Player.getY();Player.getZ();
-è·å–ç©å®¶çš„x,y,zåæ ‡
-å’ŒgetPlayerX();getPlayerY();getPlayerZ();ç›¸åŒ
+
+»ñÈ¡Íæ¼ÒµÄx,y,z×ø±ê
+
+ºÍgetPlayerX();getPlayerY();getPlayerZ();ÏàÍ¬
+
 Player.setHealth(health);
-è®¾ç½®ç©å®¶ç”Ÿå‘½
-health:åŠå¿ƒé‡ï¼Œ20æ—¶ä¸ºæ»¡è¡€ï¼Œä½†å¯ä»¥æ›´é«˜(<=255)
-å’ŒsetPlayerHealth(halfHearts)ç›¸åŒ
-å.Entityå‡½æ•°
+
+ÉèÖÃÍæ¼ÒÉúÃü
+
+health:°ëĞÄÁ¿£¬20Ê±ÎªÂúÑª£¬µ«¿ÉÒÔ¸ü¸ß(<=255)
+
+ºÍsetPlayerHealth(halfHearts)ÏàÍ¬
+
+Ê®.Entityº¯Êı
+
 Entity.setFireTicks(ent,time);
-ä½¿å®ä½“ç‡ƒçƒ§
-ent:è‡ªç„¶å®ä½“
-time:ç‡ƒçƒ§æ—¶é—´ï¼Œå•ä½ä¸ºç§’
+
+Ê¹ÊµÌåÈ¼ÉÕ
+
+ent:×ÔÈ»ÊµÌå
+
+time:È¼ÉÕÊ±¼ä£¬µ¥Î»ÎªÃë
+
 Entity.getAnimalAge(ent);
-è·å–åŠ¨ç‰©å¹´é¾„
-ent:åŠ¨ç‰©å®ä½“
-å–å€¼ä¸º-24000åˆ°0ï¼Œç©å®¶ä¸€ç›´ä¸º0
+
+»ñÈ¡¶¯ÎïÄêÁä
+
+ent:¶¯ÎïÊµÌå
+
+È¡ÖµÎª-24000µ½0£¬Íæ¼ÒÒ»Ö±Îª0
+
 Entity.setAnimalAge(ent,age);
-è®¾ç½®åŠ¨ç‰©å¹´é¾„
-ent:åŠ¨ç‰©å®ä½“
-age:åŠ¨ç‰©å¹´é¾„(-24000(å¹¼å¹´)åˆ°0(æˆå¹´))
-å¯¹æ•Œå¯¹ç”Ÿç‰©å’Œç©å®¶æ— æ•ˆ
+
+ÉèÖÃ¶¯ÎïÄêÁä
+
+ent:¶¯ÎïÊµÌå
+
+age:¶¯ÎïÄêÁä(-24000(Ó×Äê)µ½0(³ÉÄê))
+
+¶ÔµĞ¶ÔÉúÎïºÍÍæ¼ÒÎŞĞ§
+
 Entity.getEntityTypeId(ent);
-è¿”å›å®ä½“ç§ç±»id
+
+·µ»ØÊµÌåÖÖÀàid
+
 Entity.getYaw(ent);
-è·å–å®ä½“entçš„å¤´éƒ¨æ‰€æœå‘(å·¦å³)çš„è§’åº¦å€¼
-entä¸ºç©ºæ—¶é»˜è®¤ä¸ºç©å®¶
-é¢å‘zè½´æ­£æ–¹å‘æ˜¯æ—¶ä¸º0Â±360nï¼Œé¢å‘xè½´è´Ÿæ–¹å‘æ—¶ä¸º90Â±360n
-å’ŒgetYaw(ent)ç›¸åŒ
+
+»ñÈ¡ÊµÌåentµÄÍ·²¿Ëù³¯Ïò(×óÓÒ)µÄ½Ç¶ÈÖµ
+
+entÎª¿ÕÊ±Ä¬ÈÏÎªÍæ¼Ò
+
+ÃæÏòzÖáÕı·½ÏòÊÇÊ±Îª0¡À360n£¬ÃæÏòxÖá¸º·½ÏòÊ±Îª90¡À360n
+
+ºÍgetYaw(ent)ÏàÍ¬
+
 Entity.getPitch(ent);
-è·å–å®ä½“entçš„å¤´éƒ¨æ‰€æœå‘(ä¸Šä¸‹)çš„è§’åº¦å€¼
-entä¸ºç©ºæ—¶é»˜è®¤ä¸ºç©å®¶
-é¢å‘yè½´æ­£æ–¹å‘æ—¶ä¸º-90ï¼Œé¢å‘yè½´è´Ÿæ–¹å‘æ—¶ä¸º90
-å’ŒgetPitch(ent)ç›¸åŒ
+
+»ñÈ¡ÊµÌåentµÄÍ·²¿Ëù³¯Ïò(ÉÏÏÂ)µÄ½Ç¶ÈÖµ
+
+entÎª¿ÕÊ±Ä¬ÈÏÎªÍæ¼Ò
+
+ÃæÏòyÖáÕı·½ÏòÊ±Îª-90£¬ÃæÏòyÖá¸º·½ÏòÊ±Îª90
+
+ºÍgetPitch(ent)ÏàÍ¬
+
 Entity.setRot(ent,yaw,pitch);
-å°†ä¸€ä¸ªå®ä½“çš„å¤´éƒ¨æ–¹å‘è®¾ä¸º(yaw,pitch)
-ent:ç›®æ ‡å®ä½“
-yaw:æ°´å¹³è§’åº¦
-pitch:å‚ç›´è§’åº¦
-ä¸setRot(ent,yaw,pitch);ç›¸åŒ
+
+½«Ò»¸öÊµÌåµÄÍ·²¿·½ÏòÉèÎª(yaw,pitch)
+
+ent:Ä¿±êÊµÌå
+
+yaw:Ë®Æ½½Ç¶È
+
+pitch:´¹Ö±½Ç¶È
+
+ÓësetRot(ent,yaw,pitch);ÏàÍ¬
+
 Entity.remove(ent);
-ç§»é™¤å®ä½“ã€‚å¦‚æœç©å®¶å®ä½“è¢«ç§»é™¤ï¼Œç©å®¶å°†ä¸å¯è§ä¸”ä¸å¯ç§»åŠ¨
-ent:è‡ªç„¶å®ä½“
+
+ÒÆ³ıÊµÌå¡£Èç¹ûÍæ¼ÒÊµÌå±»ÒÆ³ı£¬Íæ¼Ò½«²»¿É¼ûÇÒ²»¿ÉÒÆ¶¯
+
+ent:×ÔÈ»ÊµÌå
+
 Entity.rideAnimal(player,target);
-è®©playeréª‘åœ¨targetèº«ä¸Š
-player,targetä¸ºå®ä½“
-å’ŒrideAnimal(player,target)ç›¸åŒ
+
+ÈÃplayerÆïÔÚtargetÉíÉÏ
+
+player,targetÎªÊµÌå
+
+ºÍrideAnimal(player,target)ÏàÍ¬
+
 Entity.getHealth(ent);
-è·å–å®ä½“ç”Ÿå‘½
-ent:ç”Ÿç‰©å®ä½“
+
+»ñÈ¡ÊµÌåÉúÃü
+
+ent:ÉúÎïÊµÌå
+
 Entity.setHealth(ent,health);
-è®¾ç½®å®ä½“ç”Ÿå‘½
-ent:ç”Ÿç‰©å®ä½“
-health:åŠå¿ƒé‡ï¼Œ20æ—¶ä¸ºæ»¡è¡€ï¼Œä½†å¯ä»¥æ›´é«˜(<=255)
+
+ÉèÖÃÊµÌåÉúÃü
+
+ent:ÉúÎïÊµÌå
+
+health:°ëĞÄÁ¿£¬20Ê±ÎªÂúÑª£¬µ«¿ÉÒÔ¸ü¸ß(<=255)
+
 Entity.setCarriedItem(ent,ID,int,DamageValue);
-ent:å®ä½“ã€‚åªèƒ½æ˜¯ç©å®¶ï¼Œåƒµå°¸çŒªäººï¼Œå°ç™½(skeletons)
-ID:ç‰©å“id
-int:æœªçŸ¥å€¼ã€‚æ•°å­—
-DamageValue:ç‰©å“ä¼¤å®³å€¼(é™„åŠ å€¼)
+
+ent:ÊµÌå¡£Ö»ÄÜÊÇÍæ¼Ò£¬½©Ê¬ÖíÈË£¬Ğ¡°×(skeletons)
+
+ID:ÎïÆ·id
+
+int:Î´ÖªÖµ¡£Êı×Ö
+
+DamageValue:ÎïÆ·ÉËº¦Öµ(¸½¼ÓÖµ)
+
 Entity.setSneaking(ent,boolean);
+
 Entity.getX(ent);Entity.getY(ent);Entity.getZ(ent);
-è·å–å®ä½“åæ ‡
-ent:è‡ªç„¶å®ä½“
+
+»ñÈ¡ÊµÌå×ø±ê
+
+ent:×ÔÈ»ÊµÌå
+
 Entity.setPosition(ent,x,y,z);
-å°†ä¸€ä¸ªå®ä½“entçš„åæ ‡è®¾ç½®ä¸º(x,y,z)
-ent:ç›®æ ‡å®ä½“
-x,y,z:ç›®æ ‡åæ ‡
-å’ŒsetPosition(ent,x,y,z);ç›¸åŒ
+
+½«Ò»¸öÊµÌåentµÄ×ø±êÉèÖÃÎª(x,y,z)
+
+ent:Ä¿±êÊµÌå
+
+x,y,z:Ä¿±ê×ø±ê
+
+ºÍsetPosition(ent,x,y,z);ÏàÍ¬
+
 Entity.setPositionRelative(ent,x,y,z);
-è®¾ç½®æŒ‡å®šå®ä½“å¯¹äºç©å®¶çš„ç›¸å¯¹ä½ç½®
-ent:ç›®æ ‡å®ä½“
-x,y,z:ç›¸å¯¹åæ ‡
-å’ŒsetPositionRelative(ent,x,y,z);ç›¸åŒ
+
+ÉèÖÃÖ¸¶¨ÊµÌå¶ÔÓÚÍæ¼ÒµÄÏà¶ÔÎ»ÖÃ
+
+ent:Ä¿±êÊµÌå
+
+x,y,z:Ïà¶Ô×ø±ê
+
+ºÍsetPositionRelative(ent,x,y,z);ÏàÍ¬
+
 Entity.setVelX(ent,vel);Entity.setVelY(ent,vel);Entity.setVelZ(ent,vel);
-å°†ä¸€ä¸ªå®ä½“entçš„x/y/zè½´é€Ÿåº¦è®¾ä¸ºvel
-ent:ç›®æ ‡å®ä½“
-vel:é€Ÿåº¦
-ä¸setVelX(ent,vel);setVelY(ent,vel);setVelZ(ent,vel);ç›¸åŒ
-Entity.spawnMob(x,y,z,mobID,"image");(åœç”¨ï¼Œè¯·ä½¿ç”¨Level.spawnMob)
-åœ¨ç‰¹å®šä½ç½®ç”Ÿæˆä¸€ä¸ªå®ä½“ï¼Œå¹¶æ›¿æ¢è´´å›¾
-x,y,z:æŒ‡å®šä½ç½®
-mobID:å®ä½“ç±»åˆ«id
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
-ä¸bl_spawnMob(x,y,z,mobID,"image");ç›¸åŒ
+
+½«Ò»¸öÊµÌåentµÄx/y/zÖáËÙ¶ÈÉèÎªvel
+
+ent:Ä¿±êÊµÌå
+
+vel:ËÙ¶È
+
+ÓësetVelX(ent,vel);setVelY(ent,vel);setVelZ(ent,vel);ÏàÍ¬
+
+Entity.spawnMob(x,y,z,mobID,"image");(Í£ÓÃ£¬ÇëÊ¹ÓÃLevel.spawnMob)
+
+ÔÚÌØ¶¨Î»ÖÃÉú³ÉÒ»¸öÊµÌå£¬²¢Ìæ»»ÌùÍ¼
+
+x,y,z:Ö¸¶¨Î»ÖÃ
+
+mobID:ÊµÌåÀà±ğid
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
+Óëbl_spawnMob(x,y,z,mobID,"image");ÏàÍ¬
+
 Entity.setMobSkin(mob,"image");
-å°†æŒ‡å®šå®ä½“çš„è´´å›¾æ›´æ¢
-mob:æŒ‡å®šçš„å®ä½“(ä¸æ˜¯å®ä½“ç±»åˆ«)
-image:åœ¨assetsæ–‡ä»¶å¤¹ä¸‹çš„å›¾ç‰‡è·¯å¾„
-ä¸bl_setMobSkin(mob,"image");ç›¸åŒ
+
+½«Ö¸¶¨ÊµÌåµÄÌùÍ¼¸ü»»
+
+mob:Ö¸¶¨µÄÊµÌå(²»ÊÇÊµÌåÀà±ğ)
+
+image:ÔÚassetsÎÄ¼ş¼ĞÏÂµÄÍ¼Æ¬Â·¾¶
+
+Óëbl_setMobSkin(mob,"image");ÏàÍ¬
+
 Entity.setRenderType(ent,type);
-ç”¨ä¸åŒçš„æ¨¡å‹æ¥ä¼ªè£…å®ä½“
-ent:è‡ªç„¶å®ä½“
-type:æ¨¡å‹ç§ç±»(0.no idea 1.no override 2.ç‚¹ç‡ƒçš„TNT 3.ç©å®¶ 4.æ‰è½çš„ç‰©å“ 5.??? 6.é¸¡ 7.ç‰› 8.çŒª 9.ç¾Š 10.??? 11.åƒµå°¸ 12.å°ç™½(éª·é«…) 13.èœ˜è›› 14.è‹¦åŠ›æ€•(jjæ€ª)(æ›¿æ¢å›°éš¾ï¼Œæœ‰æ¦‚ç‡å¤±è´¥) 15.å°„å‡ºçš„ç®­ 16.ç©å®¶(å› ä¸ºæ²¡æœ‰åå­—æ ‡ç­¾,æ¸¸æˆä¼šå´©æºƒ) 17.æ‰”å‡ºçš„é¸¡è›‹ 18.æ‰”å‡ºçš„é›ªçƒ 19.æŒ‚ç”»(æ¸¸æˆå´©æºƒ) 20.æ­£åœ¨æ‰ä¸‹è½çš„æ–¹å—)
-å®ä½“id:
-10:é¸¡
-11:ç‰›
-12:çŒª
-13:ç¾Š
-32:åƒµå°¸
-33:è‹¦åŠ›æ€•(jjæ€ª)
-34:éª·é«…(å°ç™½)
-35:èœ˜è››
-36:åƒµå°¸çŒªäºº
-64:æ‰è½çš„ç‰©å“
-65:ç‚¹ç‡ƒçš„TNT
-66:ä¸‹è½çš„æ–¹å—
-åä¸€.1.5.5å¯åŠ¨å™¨åŠä»¥ä¸Šå¯ç”¨æè´¨å‡½æ•°ã€‚
-Block.defineBlock(blockId,name,[textures/*å…­é¢æè´¨*/],0/*ææ–™æºid*/,true/*é€æ˜*/, int renderType/*æœªçŸ¥*/)
-Block.setShape(blockId,x1,y1,z1,x2,y2,z2)//å½¢çŠ¶
+
+ÓÃ²»Í¬µÄÄ£ĞÍÀ´Î±×°ÊµÌå
+
+ent:×ÔÈ»ÊµÌå
+
+type:Ä£ĞÍÖÖÀà(0.no idea 1.no override 2.µãÈ¼µÄTNT 3.Íæ¼Ò 4.µôÂäµÄÎïÆ· 5.??? 6.¼¦ 7.Å£ 8.Öí 9.Ñò 10.??? 11.½©Ê¬ 12.Ğ¡°×(÷¼÷Ã) 13.Ö©Öë 14.¿àÁ¦ÅÂ(jj¹Ö)(Ìæ»»À§ÄÑ£¬ÓĞ¸ÅÂÊÊ§°Ü) 15.Éä³öµÄ¼ı 16.Íæ¼Ò(ÒòÎªÃ»ÓĞÃû×Ö±êÇ©,ÓÎÏ·»á±ÀÀ£) 17.ÈÓ³öµÄ¼¦µ° 18.ÈÓ³öµÄÑ©Çò 19.¹Ò»­(ÓÎÏ·±ÀÀ£) 20.ÕıÔÚµôÏÂÂäµÄ·½¿é)
+
+ÊµÌåid:
+
+10:¼¦
+
+11:Å£
+
+12:Öí
+
+13:Ñò
+
+32:½©Ê¬
+
+33:¿àÁ¦ÅÂ(jj¹Ö)
+
+34:÷¼÷Ã(Ğ¡°×)
+
+35:Ö©Öë
+
+36:½©Ê¬ÖíÈË
+
+64:µôÂäµÄÎïÆ·
+
+65:µãÈ¼µÄTNT
+
+66:ÏÂÂäµÄ·½¿é
+
+Ê®Ò».1.5.5Æô¶¯Æ÷¼°ÒÔÉÏ¿ÉÓÃ²ÄÖÊº¯Êı¡£
+
+Block.defineBlock(blockId,name,[textures/*ÁùÃæ²ÄÖÊ*/],0/*²ÄÁÏÔ´id*/,true/*Í¸Ã÷*/, int renderType/*Î´Öª*/)
+
+Block.setShape(blockId,x1,y1,z1,x2,y2,z2)//ĞÎ×´
+
 Block.setDestroyTime(id,time);
-Block.setExplosionResistance(id,res)//çˆ†ç‚¸é˜»åŠ›,æœªå®ç°
+
+Block.setExplosionResistance(id,res)//±¬Õ¨×èÁ¦,Î´ÊµÏÖ
+
 Block.setLightLevel(id,level);
-Block.setColor(id,[color/*æ•°ç»„*/]);
-Block.setStepSound(blockId,sourceId);//æœªå®ç°
-Block.defineBlock(blockId,name,[1,2,3,4,5,6/*å…­é¢æè´¨,å³ä¸Šè§’ä¸º0*/],0/*ææ–™æºid*/,true/*é€æ˜*/, renderType)
+
+Block.setColor(id,[color/*Êı×é*/]);
+
+Block.setStepSound(blockId,sourceId);//Î´ÊµÏÖ
+
+Block.defineBlock(blockId,name,[1,2,3,4,5,6/*ÁùÃæ²ÄÖÊ,ÓÒÉÏ½ÇÎª0*/],0/*²ÄÁÏÔ´id*/,true/*Í¸Ã÷*/, renderType)
+
 renderType
-0 æ ‡å‡†
-1 èŠ±
-2 ç«æŠŠ
-3 ç«
-4 æµä½“
-6 ä½œç‰©
-7 é—¨
-8 å°é˜¶
-10 æ¥¼æ¢¯
-11 æ …æ 
-13 ä»™äººæŒ
-14 åºŠ
-18 ç»ç’ƒæ¿
-19 æ¤ç‰©çš„èŒ
-21 æ …æ é—¨
+
+0 ±ê×¼
+
+1 »¨
+
+2 »ğ°Ñ
+
+3 »ğ
+
+4 Á÷Ìå
+
+6 ×÷Îï
+
+7 ÃÅ
+
+8 Ì¨½×
+
+10 Â¥Ìİ
+
+11 Õ¤À¸
+
+13 ÏÉÈËÕÆ
+
+14 ´²
+
+18 ²£Á§°å
+
+19 Ö²ÎïµÄ¾¥
+
+21 Õ¤À¸ÃÅ
